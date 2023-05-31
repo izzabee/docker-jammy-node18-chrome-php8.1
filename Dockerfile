@@ -11,7 +11,8 @@ RUN apt install -y \
   gpg \
   software-properties-common \
   wget \
-  xvfb
+  xvfb \
+  rsync
 
 # add Node.js, PHP and ImageMagick repos
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
@@ -34,7 +35,8 @@ RUN apt update && apt install -y \
   php8.1-mysql \
   php8.1-simplexml \
   php8.1-sqlite3 \
-  php8.1-zip
+  php8.1-zip \
+  rsync
 
 # enable Yarn
 RUN corepack enable
